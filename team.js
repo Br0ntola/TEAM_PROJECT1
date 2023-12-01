@@ -35,4 +35,16 @@ const persons = [
         favoriteBook: "",
         petName: "",
     },
+    {
+        name: "Andrea",
+        surname: "Sergi",
+        age: 28,
+        city: "Gioia Tauro",
+        hobby: "Gym",
+        favoriteFood: "Pizza",
+        favoriteVideoGame: "LOL",
+        favoriteFilm: "Chiedimi se sono felice",
+        favoriteBook: "Intermittenze della morte",
+        petName: "Nora",
+    },
 ];
