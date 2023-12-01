@@ -22,5 +22,17 @@ const persons = [
         favoriteFilm: "Mr.Robot",
         favoriteBook: "marry the dragon",
         petName: "Boris",
-    }
+    },
+    {
+        name: "Melissa",
+        surname: "Mastrovincenzo",
+        age: 30,
+        city: "Castiglione Messer Marino",
+        hobby: "Dormire",
+        favoriteFood: "Pizza",
+        favoriteVideoGame: "GTA",
+        favoriteFilm: "Harry Potter",
+        favoriteBook: "",
+        petName: "",
+    },
 ];
