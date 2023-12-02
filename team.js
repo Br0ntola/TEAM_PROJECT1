@@ -47,4 +47,16 @@ const persons = [
         favoriteBook: "Intermittenze della morte",
         petName: "Nora",
     },
+    {
+        name: "Arianna",
+        surname: "Giaccari",
+        age: 22,
+        city: "Galatina",
+        hobby: "Singing",
+        favoriteFood: "Sushi",
+        favoriteVideoGame: "GTA",
+        favoriteFilm: "Spider-man",
+        favoriteBook: "L'amico ritrovato",
+        petName: "Benny",
+    }
 ];
