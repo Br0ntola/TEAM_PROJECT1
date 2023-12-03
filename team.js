@@ -58,5 +58,17 @@ const persons = [
         favoriteFilm: "Spider-man",
         favoriteBook: "L'amico ritrovato",
         petName: "Benny",
+    },
+    {
+        name: "Paolo",
+        surname: "Lupo",
+        age: 27,
+        city: "Palermo",
+        hobby: "Taekwondo",
+        favoriteFood: "Pasta asciutta",
+        favoriteVideoGame: "Cyberpunk2077",
+        favoriteFilm: "Hana-bi",
+        favoriteBook: "Demian",
+        petName: "Yupi",
     }
 ];
