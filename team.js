@@ -65,10 +65,24 @@ const persons = [
         age: 27,
         city: "Palermo",
         hobby: "Taekwondo",
-        favoriteFood: "Pasta asciutta",
+        favoriteFood: "Pasta-asciutta",
         favoriteVideoGame: "Cyberpunk2077",
         favoriteFilm: "Hana-bi",
         favoriteBook: "Demian",
         petName: "Yupi",
     }
 ];
+
+
+
+function sortByAge(array) {
+    const sortedArray = array.sort((a, b) => a.age - b.age);
+    sortedArray.forEach(el => {
+        console.log(`${el.name}-${el.age}`);
+    });
+}
+
+sortByAge(persons)
+
+
+
