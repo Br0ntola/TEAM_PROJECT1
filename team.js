@@ -110,3 +110,18 @@ function middleAge(array) {
 
 middleAge(persons)
 
+
+//Print who has a pet (name petName)
+
+for (let i = 0; i < persons.length; i++) {
+    persons.lastIndexOf(persons[i].name)
+   if (persons[i].petName) {
+       console.log(persons[i].name + " has a pet named " + persons[i].petName);
+   }
+   else {
+       console.log(persons[i].name + " has no pet");
+   }
+}
+
+
+
