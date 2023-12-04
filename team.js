@@ -60,7 +60,7 @@ const persons = [
         petName: "Benny",
     },
     {
-        name: "Paolo",
+        name: "Arianna",
         surname: "Lupo",
         age: 27,
         city: "Palermo",
@@ -72,3 +72,24 @@ const persons = [
         petName: "Yupi",
     }
 ];
+
+// Print if there are some members with the same name (name).
+
+
+function printSameName() {
+
+    for (let i = 0; i < persons.length; i++) {
+        const currentPerson = persons[i];
+        const sameName = persons.filter(person => person.name === currentPerson.name);
+
+        if (sameName.length > 1) {
+            console.log("Persone con lo stesso nome:");
+            console.log(sameName);
+            return;
+        }
+    }
+
+    console.log("Nessuna persona con lo stesso nome trovata.");
+}
+
+printSameName();
