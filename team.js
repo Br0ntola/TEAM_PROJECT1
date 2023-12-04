@@ -60,3 +60,15 @@ const persons = [
         petName: "Benny",
     }
 ];
+
+// Print who wrote ‘LOL’ or ‘League Of Legends’ as a favorite video game. (name).
+
+function videoGame(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].favoriteVideoGame === "LOL" || array[i].favoriteVideoGame === "League of Legends") {
+           console.log(array[i].name + ": " + array[i].favoriteVideoGame);
+        } 
+    }
+}
+
+videoGame(persons)
