@@ -1,4 +1,4 @@
-const persons = [
+const team = [
     {
         name: "Valentina",
         surname: "Li",
@@ -60,7 +60,7 @@ const persons = [
         petName: "Benny",
     },
     {
-        name: "Paolo",
+        name: "Arianna",
         surname: "Lupo",
         age: 27,
         city: "Palermo",
@@ -73,7 +73,7 @@ const persons = [
     }
 ];
 
-//Print the team in alphabetical order (surname name)
+//1- Print the team in alphabetical order (surname name)
 
 function alphabeticalOrder(a, b) {
     if (a.surname < b.surname) {
@@ -83,45 +83,74 @@ function alphabeticalOrder(a, b) {
         return 1;
     }
     return 0;
-}
+};
 
-let arrayOrdered = persons.sort(alphabeticalOrder);
+let arrayOrdered = team.sort(alphabeticalOrder);
 
 console.log(arrayOrdered);
 
-//Print the team in age order (name age)
+//2- Print the team in age order (name age)
 
 function sortByAge(array) {
     const sortedArray = array.sort((a, b) => a.age - b.age);
     sortedArray.forEach(el => {
         console.log(`${el.name}-${el.age}`);
     });
-}
+};
 
-sortByAge(persons)
+sortByAge(team);
 
-//Print the team middle age
+//3- Print the team middle age
 
 function middleAge(array) {
-    const ages = array.map(person => person.age)
+    const ages = array.map(person => person.age);
     const avgAge = ages.reduce((acc, number) => acc + number) / ages.length;
-    console.log(`The middle age is: ${avgAge}`)
+    console.log(`The middle age is: ${avgAge}`);
+};
+
+middleAge(team);
+
+//4- Print who has a pet (name petName)
+
+for (let i = 0; i < team.length; i++) {
+    team.lastIndexOf(team[i].name)
+    if (team[i].petName) {
+        console.log(team[i].name + " has a pet named " + team[i].petName);
+    }
+    else {
+        console.log(team[i].name + " has no pet");
+    }
+};
+
+
+//5- Print who wrote ‘LOL’ or ‘League Of Legends’ as a favorite video game. (name)
+
+function videoGame(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].favoriteVideoGame === "LOL" || array[i].favoriteVideoGame === "League of Legends") {
+            console.log(array[i].name + ": " + array[i].favoriteVideoGame);
+        };
+    };
+};
+
+videoGame(team);
+
+//6- Print if there are some members with the same name (name).
+
+function printSameName() {
+
+    for (let i = 0; i < team.length; i++) {
+        const currentPerson = team[i];
+        const sameName = team.filter(teammate => teammate.name === currentPerson.name);
+
+        if (sameName.length > 1) {
+            console.log("Persone con lo stesso nome:");
+            console.log(sameName);
+            return;
+        }
+    }
+
+    console.log("Nessuna persona con lo stesso nome trovata.");
 }
 
-middleAge(persons)
-
-
-//Print who has a pet (name petName)
-
-for (let i = 0; i < persons.length; i++) {
-    persons.lastIndexOf(persons[i].name)
-   if (persons[i].petName) {
-       console.log(persons[i].name + " has a pet named " + persons[i].petName);
-   }
-   else {
-       console.log(persons[i].name + " has no pet");
-   }
-}
-
-
-
+printSameName();
