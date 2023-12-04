@@ -72,3 +72,20 @@ const persons = [
         petName: "Yupi",
     }
 ];
+
+//Print the team in alphabetical order (surname name)
+
+function alphabeticalOrder(a, b) {
+    if (a.surname < b.surname) {
+        return -1;
+    }
+    if (a.surname > b.surname) {
+        return 1;
+    }
+    return 0;
+}
+
+let arrayOrdered = persons.sort(alphabeticalOrder);
+
+console.log(arrayOrdered);
+
