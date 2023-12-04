@@ -72,3 +72,41 @@ const persons = [
         petName: "Yupi",
     }
 ];
+
+//Print the team in alphabetical order (surname name)
+
+function alphabeticalOrder(a, b) {
+    if (a.surname < b.surname) {
+        return -1;
+    }
+    if (a.surname > b.surname) {
+        return 1;
+    }
+    return 0;
+}
+
+let arrayOrdered = persons.sort(alphabeticalOrder);
+
+console.log(arrayOrdered);
+
+//Print the team in age order (name age)
+
+function sortByAge(array) {
+    const sortedArray = array.sort((a, b) => a.age - b.age);
+    sortedArray.forEach(el => {
+        console.log(`${el.name}-${el.age}`);
+    });
+}
+
+sortByAge(persons)
+
+//Print the team middle age
+
+function middleAge(array) {
+    const ages = array.map(person => person.age)
+    const avgAge = ages.reduce((acc, number) => acc + number) / ages.length;
+    console.log(`The middle age is: ${avgAge}`)
+}
+
+middleAge(persons)
+
