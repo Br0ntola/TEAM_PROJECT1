@@ -85,4 +85,10 @@ function sortByAge(array) {
 sortByAge(persons)
 
 
+function middleAge(array){
+    const ages = array.map(person => person.age)
+    const avgAge = ages.reduce((acc, number) => acc + number) / ages.length;
+    console.log(`The middle age is: ${avgAge}`)
+}
 
+middleAge(persons)
